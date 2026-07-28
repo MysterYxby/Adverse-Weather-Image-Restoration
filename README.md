@@ -128,11 +128,19 @@ I_clean = F(I_weather; theta)
 
 ## 6. 文献整理
 
-| 论文题目 | 年份 | 会议/期刊 | 任务类型 | 天气类型 | 方法类别 | 代码/项目链接 |
-|---|---:|---|---|---|---|---|
-|  |  |  | 去雾/去雨/去雪/多天气 | 雾/雨/雪/雨滴/夜间 | CNN/Transformer/Diffusion/Physics/GAN |  |
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |
+| 论文题目 | 年份 | 会议/期刊| 天气类型 | 方法类别 | 代码/项目链接 |
+|---|---:|---|---|---|---|
+|[Restoring Vision in Adverse Weather Conditions With Patch-Based Denoising Diffusion Models](https://doi.org/10.1109/TPAMI.2023.3238179) | 2023 | TPAMI | All in one| Diffusion | [code](https://github.com/IGITUGraz/WeatherDiffusion)|
+|[Video Adverse-Weather-Component Suppression Network via Weather Messenger and Adversarial Backpropagation](https://doi.org/10.1109/ICCV51070.2023.01214) | 2023 | ICCV | All in one| CNN | [code](https://github.com/scott-yjyang/ViWS-Net)|
+|[Adverse Weather Removal with Codebook Priors](https://doi.org/10.1109/ICCV51070.2023.01163) | 2023 | ICCV | All in one| CNN+Transformer | [code](https://github.com/Owen718/AWRCP)|
+|[Exploring the Application of Large-Scale Pre-Trained Models on Adverse Weather Removal](https://doi.org/10.1109/TIP.2024.3368961) | 2024 | TIP | All in one| VLM | -|
+|[Language-driven All-in-one Adverse Weather Removal](https://doi.org/10.1109/CVPR52733.2024.02352) | 2024 | CVPR | All in one| VLM | -|
+|[MOERL: When Mixture-Of-Experts Meet Reinforcement Learning for Adverse Weather Image Restoration](https://doi.org/10.1109/TIP.2024.3501855) | 2024 | ICCV | All in one| VLM | -|
+|[MWFormer: Multi-Weather Image Restoration Using Degradation-Aware Transformers](https://doi.org/10.1109/TIP.2024.3501855) | 2024 | TIP | All in one| Transformer | [code](https://github.com/taco-group/MWFormer)|
+| [Prompt to Restore, Restore to Prompt: Cyclic Prompting for Universal Adverse Weather Removal](https://doi.org/10.1109/TIP.2025.3627860) | 2025 | TIP  | All in one | VLM | [code](https://github.com/RongxinL/CyclicPrompt) |  
+| [Robust Adverse Weather Removal via Spectral-based Spatial Grouping](https://doi.org/10.1109/ICCV51701.2025.01104) | 2025 | ICCV  | All in one | Transformer | [code](https://github.com/jeongyh98/SSGformer) |  
+| [All-in-One Transformer for Image Restoration Under Adverse Weather Degradations](https://doi.org/10.1109/TPAMI.2026.3658598) | 2026 | TPAMI  | All in one | CLIP+Transformer | - |  
+|  |  |  |  |  |  |  
 
 
 ## 7. 数据集整理
