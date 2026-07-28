@@ -1,4 +1,4 @@
-# Adverse-Weather-Image-Restoration-
+# Adverse-Weather-Image-Restoration
 Adverse Weather Image Restoration
 > 研究方向：Adverse Weather Image Restoration / Adverse Weather Image Processing  
 > 适用任务：去雾、去雨、去雪、去雨滴、低照度增强、多天气统一恢复、真实退化鲁棒恢复、下游任务友好恢复等。
@@ -129,10 +129,10 @@ I_clean = F(I_weather; theta)
 ## 6. 文献整理
 
 | 编号 | 论文题目 | 年份 | 会议/期刊 | 任务类型 | 天气类型 | 方法类别 | 核心贡献 | 使用数据集 | 评价指标 | 是否开源 | 代码/项目链接 |
-|---|---|---:|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---:|---|---|---|---|---|---|---|---|---|
 | P001 |  |  |  | 去雾/去雨/去雪/多天气 | 雾/雨/雪/雨滴/夜间 | CNN/Transformer/Diffusion/Physics/GAN |  |  | PSNR, SSIM, LPIPS, NIQE, mAP | 是/否 |  |
-| P002 |  |  |  |  |  |  |  |  |  |  |  |  
-| P003 |  |  |  |  |  |  |  |  |  |  |  | 
+| P002 |  |  |  |  |  |  |  |  |  |  |  |
+| P003 |  |  |  |  |  |  |  |  |  |  |  |
 
 
 ## 7. 数据集整理模板
