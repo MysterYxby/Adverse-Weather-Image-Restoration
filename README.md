@@ -147,8 +147,28 @@ I_clean = F(I_weather; theta)
 
 | 数据集名称 | 年份 | 任务 | 天气类型 | 数据类型 | 是否配对 | 图像数量 | 分辨率 | 训练/测试划分 | 合成/真实 | 标注类型 | 下载链接 |
 |---|---:|---|---|---|---|---:|---|---|---|---|---|
-|  |  | 去雾/去雨/去雪/多天气 | 雾/雨/雪/雨滴/夜间 | 图像/视频 | 是/否 |  |  |  | 合成/真实 | clean image / mask / depth / detection labels |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |
+| DIV2K + Flickr2K | 2017 | 辅助预训练/码本学习 | 无天气退化 | 图像 | 否 | DIV2K: 1,000；Flickr2K: 2,650 | 2K 高质量图像 | DIV2K: 800 train / 100 val / 100 test；Flickr2K 常用于训练 | 真实清晰图像 | clean image | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) / [Flickr2K](https://github.com/limbee/NTIRE2017) |
+| Snow100K | 2018 | 去雪 | 雪 | 图像 | 是 | 100K | 最大边长约 640 | 50K train / 50K test；常用 Snow100K-S/M/L 子测试集 | 合成 | clean image、snow mask | [Official](https://sites.google.com/view/yunfuliu/desnownet) |
+| Snow100K-real / Snow100K-R | 2018 | 真实去雪评估 | 雪 | 图像 | 否 | 1,329 | 最大边长约 640 | 仅真实测试/定性评估 | 真实 | 无 GT | [Official](https://sites.google.com/view/yunfuliu/desnownet) |
+| Rain1200 | 2018 | 去雨 | 雨 | 图像 | 是 | 13.2K | 未说明 | 12,000 train / 1,200 test | 合成 | clean image、rain density | [GCANet](https://github.com/wfs123456/GCANet) |
+| RainDrop / Raindrop-A / TestA | 2018 | 雨滴去除 | 雨滴 | 图像 | 是 | 约 1.1K | 未说明 | All-weather 协议常用 818 train / 58 test | 真实雨滴 + 配对 GT | clean image | [Project](https://rui1996.github.io/raindrop/raindrop_removal.html) / [GitHub](https://github.com/rui1996/DeRaindrop) |
+| SICE | 2018 | 低照度增强 | 夜间/低照度 | 图像 | 是 | 589 组序列，4,413 张图像 | 高分辨率，具体未说明 | Part1: 360 sequences；Part2: 229 sequences | 真实/多曝光 | reference image | [GitHub](https://github.com/csjcai/SICE) |
+| RESIDE / SOTS-outdoor | 2019 | 去雾 | 雾/霾 | 图像 | 是 | 约 87K | 未说明 | 含 ITS、OTS、SOTS、RTTS、HSTS；ARHC 使用 SOTS-outdoor 评估 | 合成 + 真实 | clean image | [Official](https://sites.google.com/view/reside-dehaze-datasets/reside-v0) |
+| Outdoor-Rain / Test1 | 2019 | 去雨 + 去雾 | 雨线、雾/霾 | 图像 | 是 | 约 10.5K | 高分辨率，具体未说明 | 常用 8,250 train / 750 test | 合成 | clean image | [TransWeather](https://github.com/jeya-maria-jose/TransWeather) / [WeatherDiffusion](https://github.com/IGITUGraz/WeatherDiffusion) |
+| SPA-Data | 2019 | 真实去雨 | 雨 | 图像 | 是 | 约 29.5K 或更大规模版本 | 未说明 | CyclicPrompt、AllRestorer 用于真实雨天测试 | 真实 | clean image | [SPANet](https://github.com/stevewongv/SPANet) |
+| Dark Zurich | 2019 | 下游语义分割评估 | 夜间/低照度 | 图像 | 否/部分配对 | 8,779 | 未说明 | 含 nighttime、dusk、daytime；用于夜间语义分割 | 真实 | semantic segmentation labels | [MGCDA](https://github.com/sakaridis/MGCDA) |
+| NH-HAZE | 2020 | 去雾 | 非均匀雾/霾 | 图像 | 是 | 55 | 未说明 | NTIRE 2020 challenge 数据 | 真实 | clean image | [Official](https://data.vision.ee.ethz.ch/cvl/ntire20/nh-haze/) |
+| LOL-v2 | 2020 | 低照度增强 | 低照度/夜间 | 图像 | 是 | Real: 789；Synthetic: 1,000 | 未说明 | Real: 689 train / 100 test；Synthetic: 900 train / 100 test | 真实 + 合成 | clean image | [CVPR-2020-Semi-Low-Light](https://github.com/flyywh/CVPR-2020-Semi-Low-Light/) |
+| REVIDE | 2021 | 视频去雾 | 雾 | 视频 | 是 | 48 个视频，1,082 帧 | 未说明 | 42 train / 6 test；928 train frames / 154 test frames | 真实 | clean video frames | [GitHub](https://github.com/BookerDeWitt/REVIDE_Dataset) |
+| CSD | 2021 | 去雪 | 雪、雪雾/veil | 图像 | 是 | 10K | 未说明 | MWFormer-real 将其训练集加入训练 | 合成 | clean image | [GitHub](https://github.com/weitingchen83/ICCV2021-Single-Image-Desnowing-HDCWNet) |
+| RainDS / RainDS-real | 2021 | 真实去雨、雨滴/雨线恢复 | 雨、雨滴 | 图像 | 是/部分无 GT | 5.8K | 未说明 | 含 rain streak only、raindrop only、混合雨退化；部分真实测试无 GT | 合成 + 真实 | clean image / 无 GT | [GitHub](https://github.com/Songforrr/RainDS_CCN) |
+| All-weather / AllWeather | 2022 | 多天气统一恢复 | 雨雾、雪、雨滴 | 图像 | 是 | 18,069 train；测试集约 16K-17K | 未说明 | 训练集由 Snow100K、Outdoor-Rain、RainDrop 组成；测试包含 Test1、RainDrop TestA、Snow100K-L/S | 合成 + 真实雨滴 | clean image | [TransWeather](https://github.com/jeya-maria-jose/TransWeather) |
+| RainMotion | 2022 | 视频去雨 | 雨 | 视频 | 是 | 80 个视频，2,800 帧 | 未说明 | 40 train / 40 test；2,000 train frames / 800 test frames | 合成 | clean video frames | [RDD-Net](https://github.com/wangshauitj/RDD-Net) |
+| WeatherStream | 2023 | 多天气统一恢复 | 雨、雪、雾 | 视频帧/图像 | 是 | 187,500 | 未说明 | 176,100 train / 11,400 test | 真实/自动采集 | clean image | [WGWS-Net](https://github.com/zhuyr97/WGWS-Net) |
+| KITTI-snow | 2023 | 视频去雪 | 雪 | 视频 | 是 | 50 个视频，2,500 帧 | 未说明 | 35 train / 15 test；1,750 train frames / 750 test frames | 合成 | clean video frames | [ViWS-Net](https://github.com/scott-yjyang/ViWS-Net) |
+| CDD-11 | 2024 | 多天气统一恢复、复合退化恢复 | 低照度、雾、雨、雪及其复合退化 | 图像 | 是 | 11 类退化，具体数量见仓库 | 1080 x 720 原图；训练 patch 256 x 256 | 官方 train/test | 合成 + 真实 | clean image | [HuggingFace](https://huggingface.co/datasets/gy65896/CDD-11) / [OneRestore](https://github.com/gy65896/OneRestore) |
+| HAC | 2025 | 任意混合不利天气恢复 | 雾、雨、雪、夜间、雨滴 | 图像 | 是 | 约 316K | 未说明 | 含 31 种退化组合；训练集自动生成，测试集人工调制 | 合成 | clean image、退化类型标签 | [GitHub](https://github.com/arun-kollan/RAHC) / [Paper](https://arxiv.org/abs/2305.09996) |
+| WeatherBench | 2025 | 真实多天气统一恢复 | 雨、雪、雾、昼夜光照 | 图像 | 是 | 42,002 对 | 512 x 512 | 41,402 train / 600 test | 真实 | clean image | [GitHub](https://github.com/guanqiyuan/WeatherBench) |
 
 常见记录维度建议：
 
