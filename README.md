@@ -128,89 +128,205 @@ I_clean = F(I_weather; theta)
 
 ## 6. 文献整理
 
+> 仅收录已公开代码或明确提供代码入口的论文。
+
+### 6.1 去雾 Dehazing
+
 | 论文题目 | 年份 | 会议/期刊| 天气类型 | 方法类别 | 代码/项目链接 |
 |---|---:|---|---|---|---|
-| [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004) | 2017 | CVPR | 通用图像翻译、雨滴 baseline | GAN | [code](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) |
-| [Unpaired Image-to-Image Translation Using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593) | 2017 | ICCV | 通用图像翻译、去雨/去雾 baseline | GAN | [code](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) |
-| [Removing Rain from Single Images via a Deep Detail Network](https://openaccess.thecvf.com/content_cvpr_2017/html/Fu_Removing_Rain_From_CVPR_2017_paper.html) | 2017 | CVPR | 去雨 | CNN | [code](https://github.com/XMU-smartdsp/Removing_Rain)|
-| [DesnowNet: Context-Aware Deep Network for Snow Removal](https://ieeexplore.ieee.org/document/8434356) | 2018 | TIP | 去雪 | CNN | [code](https://github.com/linYDTHU/DesnowNet_Context-Aware_Deep_Network_for_Snow_Removal) |
-| [Progressive Image Deraining Networks: A Better and Simpler Baseline](https://arxiv.org/abs/1901.09221) | 2019 | CVPRW | 去雨 | Recurrent CNN | [code](https://github.com/csdwren/PReNet) |
-| [Spatial Attentive Single-Image Deraining with a High Quality Real Rain Dataset](https://openaccess.thecvf.com/content_CVPR_2019/html/Wang_Spatial_Attentive_Single-Image_Deraining_With_a_High_Quality_Real_Rain_Dataset_CVPR_2019_paper.html) | 2019 | CVPR | 去雨 | CNN + Spatial Attention | [code](https://github.com/stevewongv/SPANet) |
-| [Heavy Rain Image Restoration: Integrating Physics Model and Conditional Adversarial Learning](https://openaccess.thecvf.com/content_CVPR_2019/html/Li_Heavy_Rain_Image_Restoration_Integrating_Physics_Model_and_Conditional_Adversarial_Learning_CVPR_2019_paper.html) | 2019 | CVPR | 去雨 + 去雾 | Physics + GAN | - |
+| [Deep Multi-Model Fusion for Single-Image Dehazing](https://openaccess.thecvf.com/content_ICCV_2019/html/Deng_Deep_Multi-Model_Fusion_for_Single-Image_Dehazing_ICCV_2019_paper.html) | 2019 | ICCV | 去雾 | Multi-model Fusion | [code](https://github.com/zijundeng/DM2F-Net) |
 | [Multi-Scale Boosted Dehazing Network with Dense Feature Fusion](https://openaccess.thecvf.com/content_CVPR_2020/html/Dong_Multi-Scale_Boosted_Dehazing_Network_With_Dense_Feature_Fusion_CVPR_2020_paper.html) | 2020 | CVPR | 去雾 | CNN | [code](https://github.com/BookerDeWitt/MSBDN-DFF) |
-| [Multi-Stage Progressive Image Restoration](https://openaccess.thecvf.com/content/CVPR2021/html/Zamir_Multi-Stage_Progressive_Image_Restoration_CVPR_2021_paper.html) | 2021 | CVPR | 去雨、去模糊、去噪 | Multi-stage CNN | [code](https://github.com/swz30/MPRNet) |
-| [Removing Raindrops and Rain Streaks in One Go](https://openaccess.thecvf.com/content/CVPR2021/html/Quan_Removing_Raindrops_and_Rain_Streaks_in_One_Go_CVPR_2021_paper.html) | 2021 | CVPR | 去雨滴 + 去雨线 | CNN | - |
-| [All Snow Removed: Single Image Desnowing Algorithm Using Hierarchical Dual-tree Complex Wavelet Representation and Contradict Channel Loss](https://openaccess.thecvf.com/content/ICCV2021/html/Chen_All_Snow_Removed_Single_Image_Desnowing_Algorithm_Using_Hierarchical_Dual-Tree_Complex_ICCV_2021_paper.html) | 2021 | ICCV | 去雪 | CNN + Wavelet | [code](https://github.com/weitingchen83/ICCV2021-Single-Image-Desnowing-HDCWNet) |
-| [Efficient Transformer for High-Resolution Image Restoration](https://openaccess.thecvf.com/content/CVPR2022/html/Zamir_Restormer_Efficient_Transformer_for_High-Resolution_Image_Restoration_CVPR_2022_paper.html) | 2022 | CVPR | 去雨、去模糊、去噪等 | Transformer | [code](https://github.com/swz30/Restormer) |
-| [TransWeather: Transformer-Based Restoration of Images Degraded by Adverse Weather Conditions](https://openaccess.thecvf.com/content/CVPR2022/html/Valanarasu_TransWeather_Transformer-Based_Restoration_of_Images_Degraded_by_Adverse_Weather_Conditions_CVPR_2022_paper.html) | 2022 | CVPR | All in one | Transformer | [code](https://github.com/jeya-maria-jose/TransWeather) |
-| [All-in-One Image Restoration for Unknown Corruption](https://openaccess.thecvf.com/content/CVPR2022/html/Li_All-in-One_Image_Restoration_for_Unknown_Corruption_CVPR_2022_paper.html) | 2022 | CVPR | All in one | CNN + Contrastive Learning | [code](https://github.com/XLearning-SCU/2022-CVPR-AirNet) |
-| [MAXIM: Multi-Axis MLP for Image Processing](https://openaccess.thecvf.com/content/CVPR2022/html/Tu_MAXIM_Multi-Axis_MLP_for_Image_Processing_CVPR_2022_paper.html) | 2022 | CVPR | 通用图像恢复 | MLP | [code](https://github.com/google-research/maxim) |
-| [Uformer: A General U-Shaped Transformer for Image Restoration](https://openaccess.thecvf.com/content/CVPR2022/html/Wang_Uformer_A_General_U-Shaped_Transformer_for_Image_Restoration_CVPR_2022_paper.html) | 2022 | CVPR | 通用图像恢复 | Transformer | [code](https://github.com/ZhendongWang6/Uformer) |
-| [Simple Baselines for Image Restoration](https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/3043_ECCV_2022_paper.php) | 2022 | ECCV | 去雨、去模糊、去噪等 | CNN | [code](https://github.com/megvii-research/NAFNet) |
+| [PSD: Principled Synthetic-to-Real Dehazing Guided by Physical Priors](https://openaccess.thecvf.com/content/CVPR2021/html/Chen_PSD_Principled_Synthetic-to-Real_Dehazing_Guided_by_Physical_Priors_CVPR_2021_paper.html) | 2021 | CVPR | 去雾 | Physical Priors + Domain Adaptation | [code](https://github.com/zychen-ustc/PSD-Principled-Synthetic-to-Real-Dehazing-Guided-by-Physical-Priors) |
+| [Vision Transformers for Single Image Dehazing](https://doi.org/10.1109/TIP.2023.3256763) | 2023 | TIP | 去雾 | Transformer | [code](https://github.com/IDKiro/DehazeFormer) |
+| [Curricular Contrastive Regularization for Physics-aware Single Image Dehazing](https://openaccess.thecvf.com/content/CVPR2023/html/Zheng_Curricular_Contrastive_Regularization_for_Physics-Aware_Single_Image_Dehazing_CVPR_2023_paper.html) | 2023 | CVPR | 去雾 | Physics-aware Contrastive Learning | [code](https://github.com/yuzheng9/C2PNet) |
+| [Revitalizing Real Image Dehazing via High-Quality Codebook Priors](https://openaccess.thecvf.com/content/CVPR2023/html/Wu_RIDCP_Revitalizing_Real_Image_Dehazing_via_High-Quality_Codebook_Priors_CVPR_2023_paper.html) | 2023 | CVPR | 去雾 | Codebook Priors | [code](https://github.com/RQ-Wu/RIDCP_dehazing) |
+| [PDDA: Prompt-driven Domain Adaptation for Real-world Image Dehazing](https://github.com/YanZhang-zy/PDDA) | 2026 | TIP | 去雾 | Prompt-driven Domain Adaptation | [code](https://github.com/YanZhang-zy/PDDA) |
+| [Bilevel Layer-Positioning LoRA for Real Image Dehazing](https://arxiv.org/abs/2603.10872) | 2026 | CVPR | 去雾 | LoRA + Bilevel Optimization | [code](https://github.com/YanZhang-zy/BiLaLoRA) |
+| [From Events to Clarity: The Event-Guided Diffusion Framework for Dehazing](https://arxiv.org/abs/2511.11944) | 2026 | CVPR | 去雾 | Event-guided Diffusion | [code](https://github.com/DavisWANG0/EvDehaze) |
+
+### 6.2 去雨与雨滴去除 Deraining / Raindrop Removal
+
+| 论文题目 | 年份 | 会议/期刊| 天气类型 | 方法类别 | 代码/项目链接 |
+|---|---:|---|---|---|---|
+| [Removing Rain from Single Images via a Deep Detail Network](https://openaccess.thecvf.com/content_cvpr_2017/html/Fu_Removing_Rain_From_CVPR_2017_paper.html) | 2017 | CVPR | 去雨 | CNN | [code](https://github.com/XMU-smartdsp/Removing_Rain) |
+| [Attentive Generative Adversarial Network for Raindrop Removal from A Single Image](https://openaccess.thecvf.com/content_cvpr_2018/html/Qian_Attentive_Generative_Adversarial_CVPR_2018_paper.html) | 2018 | CVPR | 雨滴去除 | Attention + GAN | [code](https://github.com/rui1996/DeRaindrop) |
+| [Spatial Attentive Single-Image Deraining with a High Quality Real Rain Dataset](https://openaccess.thecvf.com/content_CVPR_2019/html/Wang_Spatial_Attentive_Single-Image_Deraining_With_a_High_Quality_Real_Rain_Dataset_CVPR_2019_paper.html) | 2019 | CVPR | 去雨 | CNN + Spatial Attention | [code](https://github.com/stevewongv/SPANet) |
+| [Removing Raindrops and Rain Streaks in One Go](https://openaccess.thecvf.com/content/CVPR2021/html/Quan_Removing_Raindrops_and_Rain_Streaks_in_One_Go_CVPR_2021_paper.html) | 2021 | CVPR | 去雨滴 + 去雨线 | CNN | [code](https://github.com/Songforrr/RainDS_CCN) |
 | [Image De-raining Transformer](https://openaccess.thecvf.com/content/CVPR2022/html/Xiao_Image_De-Raining_Transformer_CVPR_2022_paper.html) | 2022 | CVPR | 去雨 | Transformer | [code](https://github.com/jiexiaou/IDT) |
+| [Learning A Sparse Transformer Network for Effective Image Deraining](https://openaccess.thecvf.com/content/CVPR2023/html/Chen_Learning_a_Sparse_Transformer_Network_for_Effective_Image_Deraining_CVPR_2023_paper.html) | 2023 | CVPR | 去雨 | Sparse Transformer | [code](https://github.com/cschenxiang/DRSformer) |
+| [Sparse Sampling Transformer with Uncertainty-Driven Ranking for Unified Removal of Raindrops and Rain Streaks](https://openaccess.thecvf.com/content/ICCV2023/html/Chen_Sparse_Sampling_Transformer_with_Uncertainty-Driven_Ranking_for_Unified_Removal_of_ICCV_2023_paper.html) | 2023 | ICCV | 去雨滴 + 去雨线 | Sparse Sampling Transformer | [code](https://github.com/Ephemeral182/UDR-S2Former_deraining) |
+| [UniRain: Unified Image Deraining with RAG-based Dataset Distillation and Multi-objective Reweighted Optimization](https://arxiv.org/abs/2603.03967) | 2026 | CVPR | 去雨、雨滴、夜间雨 | RAG Dataset Distillation + MoE | [code](https://github.com/QianfengY/UniRain) |
+
+### 6.3 去雪 Desnowing
+
+| 论文题目 | 年份 | 会议/期刊| 天气类型 | 方法类别 | 代码/项目链接 |
+|---|---:|---|---|---|---|
+| [DesnowNet: Context-Aware Deep Network for Snow Removal](https://doi.org/10.1109/TIP.2018.2861572) | 2018 | TIP | 去雪 | CNN | [code](https://github.com/linYDTHU/DesnowNet_Context-Aware_Deep_Network_for_Snow_Removal) |
+| [JSTASR: Joint Size and Transparency-Aware Snow Removal Algorithm Based on Modified Partial Convolution and Veiling Effect Removal](https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/5485_ECCV_2020_paper.php) | 2020 | ECCV | 去雪 | Partial Convolution + Veiling Removal | [code](https://github.com/weitingchen83/JSTASR-DesnowNet-ECCV-2020) |
+| [All Snow Removed: Single Image Desnowing Algorithm Using Hierarchical Dual-tree Complex Wavelet Representation and Contradict Channel Loss](https://openaccess.thecvf.com/content/ICCV2021/html/Chen_All_Snow_Removed_Single_Image_Desnowing_Algorithm_Using_Hierarchical_Dual-Tree_Complex_ICCV_2021_paper.html) | 2021 | ICCV | 去雪 | CNN + Wavelet | [code](https://github.com/weitingchen83/ICCV2021-Single-Image-Desnowing-HDCWNet) |
+
+### 6.4 低照度与夜间恢复 Low-Light / Nighttime Restoration
+
+| 论文题目 | 年份 | 会议/期刊| 天气类型 | 方法类别 | 代码/项目链接 |
+|---|---:|---|---|---|---|
+| [Low-Light Image Enhancement with Normalizing Flow](https://ojs.aaai.org/index.php/AAAI/article/view/19923) | 2022 | AAAI | 低照度 | Normalizing Flow | [code](https://github.com/wyf0912/LLFlow) |
+| [SNR-Aware Low-Light Image Enhancement](https://openaccess.thecvf.com/content/CVPR2022/html/Xu_SNR-Aware_Low-Light_Image_Enhancement_CVPR_2022_paper.html) | 2022 | CVPR | 低照度 | SNR-aware Transformer/CNN | [code](https://github.com/dvlab-research/SNR-Aware-Low-Light-Enhance) |
+| [Retinexformer: One-stage Retinex-based Transformer for Low-light Image Enhancement](https://doi.org/10.1109/ICCV51070.2023.01150) | 2023 | ICCV | 低照度 | Retinex + Transformer | [code](https://github.com/caiyuanhao1998/Retinexformer) |
+| [Reti-Diff: Illumination Degradation Image Restoration with Retinex-based Latent Diffusion Model](https://openreview.net/forum?id=kxFtMHItrf) | 2025 | ICLR | 低照度、背光、水下增强 | Retinex + Latent Diffusion | [code](https://github.com/ChunmingHe/Reti-Diff) |
+| [HVI: A New Color Space for Low-light Image Enhancement](https://openaccess.thecvf.com/content/CVPR2025/html/Yan_HVI_A_New_Color_Space_for_Low-light_Image_Enhancement_CVPR_2025_paper.html) | 2025 | CVPR | 低照度 | Color Space + CNN | [code](https://github.com/Fediory/HVI-CIDNet) |
+| [DarkIR: Robust Low-Light Image Restoration](https://openaccess.thecvf.com/content/CVPR2025/html/Feijoo_DarkIR_Robust_Low-Light_Image_Restoration_CVPR_2025_paper.html) | 2025 | CVPR | 低照度、噪声、模糊 | Low-light Restoration | [code](https://github.com/cidautai/DarkIR) |
+| [ZeroIDIR: Zero-Reference Illumination Degradation Image Restoration with Perturbed Consistency Diffusion Models](https://openaccess.thecvf.com/content/CVPR2026/html/Jiang_ZeroIDIR_Zero-Reference_Illumination_Degradation_Image_Restoration_with_Perturbed_Consistency_Diffusion_CVPR_2026_paper.html) | 2026 | CVPR | 低照度、背光、曝光退化 | Perturbed Consistency Diffusion | [code](https://github.com/JianghaiSCU/ZeroIDIR) |
+
+### 6.5 All-in-One / 多天气统一恢复
+
+| 论文题目 | 年份 | 会议/期刊| 天气类型 | 方法类别 | 代码/项目链接 |
+|---|---:|---|---|---|---|
+| [TransWeather: Transformer-Based Restoration of Images Degraded by Adverse Weather Conditions](https://openaccess.thecvf.com/content/CVPR2022/html/Valanarasu_TransWeather_Transformer-Based_Restoration_of_Images_Degraded_by_Adverse_Weather_Conditions_CVPR_2022_paper.html) | 2022 | CVPR | All in one | Transformer | [code](https://github.com/jeya-maria-jose/TransWeather) |
+| [Learning Multiple Adverse Weather Removal via Two-stage Knowledge Learning and Multi-contrastive Regularization](https://openaccess.thecvf.com/content/CVPR2022/html/Chen_Learning_Multiple_Adverse_Weather_Removal_via_Two-Stage_Knowledge_Learning_and_Multi-Contrastive_CVPR_2022_paper.html) | 2022 | CVPR | All in one | Knowledge Distillation + Contrastive Learning | [code](https://github.com/fingerk28/Two-stage-Knowledge-For-Multiple-Adverse-Weather-Removal) |
+| [All-in-One Image Restoration for Unknown Corruption](https://openaccess.thecvf.com/content/CVPR2022/html/Li_All-in-One_Image_Restoration_for_Unknown_Corruption_CVPR_2022_paper.html) | 2022 | CVPR | 通用 All in one | CNN + Contrastive Learning | [code](https://github.com/XLearning-SCU/2022-CVPR-AirNet) |
 | [Restoring Vision in Adverse Weather Conditions With Patch-Based Denoising Diffusion Models](https://doi.org/10.1109/TPAMI.2023.3238179) | 2023 | TPAMI | All in one | Diffusion | [code](https://github.com/IGITUGraz/WeatherDiffusion) |
-| [Video Adverse-Weather-Component Suppression Network via Weather Messenger and Adversarial Backpropagation](https://doi.org/10.1109/ICCV51070.2023.01214) | 2023 | ICCV | All in one video | CNN + Transformer | [code](https://github.com/scott-yjyang/ViWS-Net) |
 | [Adverse Weather Removal with Codebook Priors](https://doi.org/10.1109/ICCV51070.2023.01163) | 2023 | ICCV | All in one | CNN + Transformer + Codebook | [code](https://github.com/Owen718/AWRCP) |
-| [PromptIR: Prompting for All-in-One Blind Image Restoration](https://openreview.net/forum?id=KAlSIL4tXU) | 2023 | NeurIPS | 通用 All in one | Prompt Learning | [code](https://github.com/va1shn9v/PromptIR) |
 | [Learning Weather-General and Weather-Specific Features for Image Restoration Under Multiple Adverse Weather Conditions](https://openaccess.thecvf.com/content/CVPR2023/html/Zhu_Learning_Weather-General_and_Weather-Specific_Features_for_Image_Restoration_Under_Multiple_Adverse_CVPR_2023_paper.html) | 2023 | CVPR | All in one | Weather-general/specific Learning | [code](https://github.com/zhuyr97/WGWS-Net) |
-| [GridFormer: Residual Dense Transformer with Grid Structure for Image Restoration in Adverse Weather Conditions](https://arxiv.org/abs/2305.17863) | 2023 | arXiv | All in one | Transformer | [code](https://github.com/TaoWangzj/GridFormer) |
-| [Exploring the Application of Large-Scale Pre-Trained Models on Adverse Weather Removal](https://doi.org/10.1109/TIP.2024.3368961) | 2024 | TIP | All in one | VLM | - |
-| [Language-driven All-in-one Adverse Weather Removal](https://doi.org/10.1109/CVPR52733.2024.02352) | 2024 | CVPR | All in one | VLM + MoE | - |
-| [MWFormer: Multi-Weather Image Restoration Using Degradation-Aware Transformers](https://doi.org/10.1109/TIP.2024.3501855) | 2024 | TIP | All in one | Transformer | [code](https://github.com/taco-group/MWFormer) |
+| [PromptIR: Prompting for All-in-One Blind Image Restoration](https://openreview.net/forum?id=KAlSIL4tXU) | 2023 | NeurIPS | 通用 All in one | Prompt Learning | [code](https://github.com/va1shn9v/PromptIR) |
+| [Language-driven All-in-one Adverse Weather Removal](https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Language-driven_All-in-one_Adverse_Weather_Removal_CVPR_2024_paper.html) | 2024 | CVPR | All in one | VLM + Language Prompt | [code](https://github.com/noxsine/LDR) |
 | [Controlling Vision-Language Models for Universal Image Restoration](https://openreview.net/forum?id=t3vnnLeajU) | 2024 | ICLR | 通用 All in one | DA-CLIP + Diffusion | [code](https://github.com/Algolzw/daclip-uir) |
 | [Selective Hourglass Mapping for Universal Image Restoration Based on Diffusion Model](https://openaccess.thecvf.com/content/CVPR2024/html/Zheng_Selective_Hourglass_Mapping_for_Universal_Image_Restoration_Based_on_Diffusion_Model_CVPR_2024_paper.html) | 2024 | CVPR | 通用 All in one | Diffusion | [code](https://github.com/iSEE-Laboratory/DiffUIR) |
 | [InstructIR: High-Quality Image Restoration Following Human Instructions](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/5238_ECCV_2024_paper.php) | 2024 | ECCV | 通用 All in one | Instruction/VLM | [code](https://github.com/mv-lab/InstructIR) |
-| [MambaIR: A Simple Baseline for Image Restoration with State-Space Model](https://arxiv.org/abs/2402.15648) | 2024 | ECCV | 通用图像恢复 | State Space Model | [code](https://github.com/csguoh/MambaIR) |
-| [Restore Anything with Masks](https://github.com/DragonisCV/RAM) | 2024 | ECCV | 通用 All in one | Mask Image Modeling | [code](https://github.com/DragonisCV/RAM) |
-| [Restoring Images in Adverse Weather Conditions via Histogram Transformer](https://arxiv.org/abs/2407.10172) | 2024 | ECCV | All in one | Histogram Transformer | [code](https://github.com/sunshangquan/Histoformer) |
-| [Teaching Tailored to Talent: Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint](https://arxiv.org/abs/2409.15739) | 2024 | ECCV | All in one | Diffusion + Prompt Pool | [code](https://github.com/Ephemeral182/ECCV24_T3-DiffWeather) |
-| [All-in-one Video Restoration for Time-varying Unknown Degradations](https://github.com/XLearning-SCU/2024-NeurIPS-AverNet) | 2024 | NeurIPS | 通用视频恢复 | Video Restoration | [code](https://github.com/XLearning-SCU/2024-NeurIPS-AverNet) |
-| [Neural Degradation Representation Learning for All-In-One Image Restoration](https://arxiv.org/abs/2310.12848) | 2024 | TIP | 通用 All in one | Degradation Representation | [code](https://github.com/mdyao/NDR-Restore) |
+| [Restore Anything with Masks](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/1336_ECCV_2024_paper.php) | 2024 | ECCV | 通用 All in one | Mask Image Modeling | [code](https://github.com/DragonisCV/RAM) |
+| [Restoring Images in Adverse Weather Conditions via Histogram Transformer](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/6366_ECCV_2024_paper.php) | 2024 | ECCV | All in one | Histogram Transformer | [code](https://github.com/sunshangquan/Histoformer) |
+| [Teaching Tailored to Talent: Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/2698_ECCV_2024_paper.php) | 2024 | ECCV | All in one | Diffusion + Prompt Pool | [code](https://github.com/Ephemeral182/ECCV24_T3-DiffWeather) |
+| [Neural Degradation Representation Learning for All-In-One Image Restoration](https://doi.org/10.1109/TIP.2024.3425893) | 2024 | TIP | 通用 All in one | Degradation Representation | [code](https://github.com/mdyao/NDR-Restore) |
+| [MWFormer: Multi-Weather Image Restoration Using Degradation-Aware Transformers](https://doi.org/10.1109/TIP.2024.3501855) | 2024 | TIP | All in one | Degradation-aware Transformer | [code](https://github.com/taco-group/MWFormer) |
+| [Efficient Deweather Mixture-of-Experts with Uncertainty-aware Feature-wise Linear Modulation](https://ojs.aaai.org/index.php/AAAI/article/view/28030) | 2024 | AAAI | All in one | MoE + Uncertainty | [code](https://github.com/RoyZry98/MoFME-Pytorch) |
 | [Prompt to Restore, Restore to Prompt: Cyclic Prompting for Universal Adverse Weather Removal](https://doi.org/10.1109/TIP.2025.3627860) | 2025 | TIP | All in one | VLM + Cyclic Prompt | [code](https://github.com/RongxinL/CyclicPrompt) |
 | [Robust Adverse Weather Removal via Spectral-based Spatial Grouping](https://doi.org/10.1109/ICCV51701.2025.01104) | 2025 | ICCV | All in one | Transformer | [code](https://github.com/jeongyh98/SSGformer) |
-| [MOERL: When Mixture-of-Experts Meet Reinforcement Learning for Adverse Weather Image Restoration](https://openaccess.thecvf.com/content/ICCV2025/html/Wang_MOERL_When_Mixture-of-Experts_Meet_Reinforcement_Learning_for_Adverse_Weather_Image_ICCV_2025_paper.html) | 2025 | ICCV | All in one | MoE + RL | [code](https://taowangzj.github.io/) |
-| [Learning to Restore Arbitrary Hybrid Adverse Weather Conditions in One Go](https://arxiv.org/abs/2305.09996) | 2025 | PR | 任意混合天气 | GAN + Unified Restoration | [code](https://github.com/arun-kollan/RAHC) |
 | [AdaIR: Adaptive All-in-One Image Restoration via Frequency Mining and Modulation](https://openreview.net/forum?id=M5t0WvjfCg) | 2025 | ICLR | 通用 All in one | Frequency Mining | [code](https://github.com/c-yn/AdaIR) |
-| [Complexity Experts are Task-Discriminative Learners for Any Image Restoration](https://github.com/eduardzamfir/MoCE-IR) | 2025 | CVPR | 通用 All in one | MoE | [code](https://github.com/eduardzamfir/MoCE-IR) |
+| [Debiased All-in-one Image Restoration with Task Uncertainty Regularization](https://ojs.aaai.org/index.php/AAAI/article/view/32905) | 2025 | AAAI | 通用 All in one | Task Uncertainty Regularization | [code](https://github.com/Aitical/TUR) |
+| [Complexity Experts are Task-Discriminative Learners for Any Image Restoration](https://openaccess.thecvf.com/content/CVPR2025/html/Zamfir_Complexity_Experts_are_Task-Discriminative_Learners_for_Any_Image_Restoration_CVPR_2025_paper.html) | 2025 | CVPR | 通用 All in one | MoE | [code](https://github.com/eduardzamfir/MoCE-IR) |
 | [Degradation-Aware Feature Perturbation for All-in-One Image Restoration](https://openaccess.thecvf.com/content/CVPR2025/html/Tian_Degradation-Aware_Feature_Perturbation_for_All-in-One_Image_Restoration_CVPR_2025_paper.html) | 2025 | CVPR | 通用 All in one | Feature Perturbation | [code](https://github.com/TxpHome/DFPIR) |
 | [Vision-Language Gradient Descent-driven All-in-One Deep Unfolding Networks](https://openaccess.thecvf.com/content/CVPR2025/html/Zeng_Vision-Language_Gradient_Descent-driven_All-in-One_Deep_Unfolding_Networks_CVPR_2025_paper.html) | 2025 | CVPR | 通用 All in one | VLM + Deep Unfolding | [code](https://github.com/xianggkl/VLU-Net) |
-| [GenDeg: Diffusion-Based Degradation Synthesis for Generalizable All-In-One Image Restoration](https://github.com/sudraj2002/GenDeg) | 2025 | CVPR | 通用 All in one | Diffusion Data Synthesis | [code](https://github.com/sudraj2002/GenDeg) |
-| [DarkIR: Robust Low-Light Image Restoration](https://arxiv.org/abs/2412.13443) | 2025 | CVPR | 低照度、噪声、模糊 | Low-light Restoration | [code](https://github.com/cidautai/DarkIR) |
-| [MambaIRv2: Attentive State Space Restoration](https://arxiv.org/abs/2411.15269) | 2025 | CVPR | 通用图像恢复 | State Space Model | [code](https://github.com/csguoh/MambaIR) |
-| [MaIR: A Locality- and Continuity-Preserving Mamba for Image Restoration](https://github.com/pseudo-sue/MaIR) | 2025 | CVPR | 通用图像恢复 | State Space Model | [code](https://github.com/pseudo-sue/MaIR) |
-| [FoundIR: Unleashing Million-scale Training Data to Advance Foundation Models for Image Restoration](https://github.com/House-Leo/FoundIR) | 2025 | ICCV | 通用图像恢复 | Foundation Model | [code](https://github.com/House-Leo/FoundIR) |
-| [Cat-AIR: Content and Task-Aware All-in-One Image Restoration](https://arxiv.org/abs/2503.17915) | 2025 | CVPR | 通用 All in one | Content/Task-aware Attention | [code](https://kongwanbianjinyu.github.io/Cat-AIR/) |
-| [All-in-One Transformer for Image Restoration Under Adverse Weather Degradations](https://doi.org/10.1109/TPAMI.2026.3658598) | 2026 | TPAMI | All in one | CLIP + Transformer | - |
+| [GenDeg: Diffusion-Based Degradation Synthesis for Generalizable All-In-One Image Restoration](https://openaccess.thecvf.com/content/CVPR2025/html/Rajagopalan_GenDeg_Diffusion-Based_Degradation_Synthesis_for_Generalizable_All-In-One_Image_Restoration_CVPR_2025_paper.html) | 2025 | CVPR | 通用 All in one | Diffusion Data Synthesis | [code](https://github.com/sudraj2002/GenDeg) |
+| [Learning Continuous Wasserstein Barycenter Space for Generalized All-in-One Image Restoration](https://github.com/xl-tang3/BaryIR) | 2026 | TPAMI | 通用 All in one | Wasserstein Barycenter Representation | [code](https://github.com/xl-tang3/BaryIR) |
+| [Learning Domain-Aware Task Prompt Representations for Multi-Domain All-in-One Image Restoration](https://arxiv.org/abs/2603.01725) | 2026 | ICLR | 多域 All in one | Domain-aware Task Prompt | [code](https://github.com/GuangluDong0728/DATPRL-IR) |
+| [RestoreVAR: Visual Autoregressive Generation for All-in-One Image Restoration](https://openreview.net/forum?id=yvXtCn2zfz) | 2026 | ICLR | 通用 All in one | Visual Autoregressive Generation | [code](https://github.com/sudraj2002/RestoreVAR) |
+| [Retrieve-to-Restore: Efficient All-in-One Image Restoration with a Retrieval-Based Degradation Bank](https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Retrieve-to-Restore_Efficient_All-in-One_Image_Restoration_with_a_Retrieval-Based_Degradation_Bank_CVPR_2026_paper.html) | 2026 | CVPR | 通用 All in one | Retrieval-based Degradation Bank | [code](https://github.com/cscxwang/R2R) |
+| [FAPE-IR: Frequency-Aware Planning and Execution Framework for All-in-One Image Restoration](https://arxiv.org/abs/2511.14099) | 2026 | CVPR | 通用 All in one | MLLM Planning + Diffusion + LoRA-MoE | [code](https://github.com/Programmergg/FAPE-IR) |
+| [FoundIR-v2: Optimizing Pre-Training Data Mixtures for Image Restoration Foundation Model](https://arxiv.org/abs/2512.09282) | 2026 | CVPR | 通用 All in one | Foundation Model + Data Mixture | [code](https://github.com/cschenxiang/FoundIR-v2) |
+| [Restore, Assess, Repeat: A Unified Framework for Iterative Image Restoration](https://arxiv.org/abs/2603.26385) | 2026 | CVPR | 通用 All in one | Iterative Restoration + Quality Assessment | [code](https://github.com/SamsungLabs/RAR) |
+| [Pixel Ignores, Superpixel Sees: Adverse Weather Image Restoration via Semantic-Center SSM](https://github.com/LIDAYU-DayuLi/SSR) | 2026 | ECCV | All in one | Semantic-Center SSM | [code](https://github.com/LIDAYU-DayuLi/SSR) |
+
+### 6.6 通用图像恢复 General Image Restoration
+
+| 论文题目 | 年份 | 会议/期刊| 天气类型 | 方法类别 | 代码/项目链接 |
+|---|---:|---|---|---|---|
+| [Multi-Stage Progressive Image Restoration](https://openaccess.thecvf.com/content/CVPR2021/html/Zamir_Multi-Stage_Progressive_Image_Restoration_CVPR_2021_paper.html) | 2021 | CVPR | 去雨、去模糊、去噪 | Multi-stage CNN | [code](https://github.com/swz30/MPRNet) |
+| [Efficient Transformer for High-Resolution Image Restoration](https://openaccess.thecvf.com/content/CVPR2022/html/Zamir_Restormer_Efficient_Transformer_for_High-Resolution_Image_Restoration_CVPR_2022_paper.html) | 2022 | CVPR | 去雨、去模糊、去噪等 | Transformer | [code](https://github.com/swz30/Restormer) |
+| [MAXIM: Multi-Axis MLP for Image Processing](https://openaccess.thecvf.com/content/CVPR2022/html/Tu_MAXIM_Multi-Axis_MLP_for_Image_Processing_CVPR_2022_paper.html) | 2022 | CVPR | 通用图像恢复 | MLP | [code](https://github.com/google-research/maxim) |
+| [Uformer: A General U-Shaped Transformer for Image Restoration](https://openaccess.thecvf.com/content/CVPR2022/html/Wang_Uformer_A_General_U-Shaped_Transformer_for_Image_Restoration_CVPR_2022_paper.html) | 2022 | CVPR | 通用图像恢复 | Transformer | [code](https://github.com/ZhendongWang6/Uformer) |
+| [Simple Baselines for Image Restoration](https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/3043_ECCV_2022_paper.php) | 2022 | ECCV | 去雨、去模糊、去噪等 | CNN | [code](https://github.com/megvii-research/NAFNet) |
+| [MambaIR: A Simple Baseline for Image Restoration with State-Space Model](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/6810_ECCV_2024_paper.php) | 2024 | ECCV | 通用图像恢复 | State Space Model | [code](https://github.com/csguoh/MambaIR) |
+| [MambaIRv2: Attentive State Space Restoration](https://openaccess.thecvf.com/content/CVPR2025/html/Guo_MambaIRv2_Attentive_State_Space_Restoration_CVPR_2025_paper.html) | 2025 | CVPR | 通用图像恢复 | State Space Model | [code](https://github.com/csguoh/MambaIR) |
+| [MaIR: A Locality- and Continuity-Preserving Mamba for Image Restoration](https://openaccess.thecvf.com/content/CVPR2025/html/Li_MaIR_A_Locality-_and_Continuity-Preserving_Mamba_for_Image_Restoration_CVPR_2025_paper.html) | 2025 | CVPR | 通用图像恢复 | State Space Model | [code](https://github.com/XLearning-SCU/2025-CVPR-MaIR) |
+| [FoundIR: Unleashing Million-scale Training Data to Advance Foundation Models for Image Restoration](https://openaccess.thecvf.com/content/ICCV2025/html/Wang_FoundIR_Unleashing_Million-scale_Training_Data_to_Advance_Foundation_Models_for_Image_ICCV_2025_paper.html) | 2025 | ICCV | 通用图像恢复 | Foundation Model | [code](https://github.com/House-Leo/FoundIR) |
+| [Residual Diffusion Bridge Model for Image Restoration](https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Residual_Diffusion_Bridge_Model_for_Image_Restoration_CVPR_2026_paper.html) | 2026 | CVPR | 通用图像恢复 | Diffusion Bridge | [code](https://github.com/MiliLab/RDBM) |
+| [Scan Clusters, Not Pixels: A Cluster-Centric Paradigm for Efficient Ultra-high-definition Image Restoration](https://openaccess.thecvf.com/content/CVPR2026/html/Wu_Scan_Clusters_Not_Pixels_A_Cluster-Centric_Paradigm_for_Efficient_Ultra-high-definition_CVPR_2026_paper.html) | 2026 | CVPR | UHD 去雨、去雾、低照度、去雪 | Cluster-Centric SSM | [code](https://github.com/5chen/C2SSM) |
+
+### 6.7 视频不利天气/视频恢复 Video Restoration
+
+| 论文题目 | 年份 | 会议/期刊| 天气类型 | 方法类别 | 代码/项目链接 |
+|---|---:|---|---|---|---|
+| [Video Adverse-Weather-Component Suppression Network via Weather Messenger and Adversarial Backpropagation](https://doi.org/10.1109/ICCV51070.2023.01214) | 2023 | ICCV | 视频 All in one | CNN + Transformer | [code](https://github.com/scott-yjyang/ViWS-Net) |
+| [Video Dehazing via a Multi-Range Temporal Alignment Network with Physical Prior](https://openaccess.thecvf.com/content/CVPR2023/html/Xu_Video_Dehazing_via_a_Multi-Range_Temporal_Alignment_Network_With_Physical_CVPR_2023_paper.html) | 2023 | CVPR | 视频去雾 | Temporal Alignment + Physical Prior | [code](https://github.com/jiaqixuac/MAP-Net) |
+| [All-in-one Video Restoration for Time-varying Unknown Degradations](https://openreview.net/forum?id=9G7pACD1jD) | 2024 | NeurIPS | 通用视频恢复 | Video Restoration | [code](https://github.com/XLearning-SCU/2024-NeurIPS-AverNet) |
 
 
-## 7. 数据集整理
+## 7. 数据集
+
+> 聚焦不利天气图像/视频恢复。
+
+### 7.1 去雨与雨滴去除 Deraining / Raindrop Removal
+
+| 数据集名称 | 年份 | 任务 | 天气类型 | 数据类型 | 是否配对 | 图像数量 | 分辨率 | 训练/测试划分 | 合成/真实 | 标注类型 | 下载链接 |
+|---|---:|---|---|---|---|---:|---|---|---|---|---|
+| DDN-Data | 2017 | 去雨 | 雨线 | 图像 | 是 | 14K | 未说明 | 训练/测试划分见官方项目 | 合成 | clean image | [Project](https://xueyangfu.github.io/projects/cvpr2017.html) |
+| Rain800 | 2017 | 去雨 | 雨线 | 图像 | 是 | 800 | 未说明 | 700 train / 100 test | 合成 | clean image | [GitHub](https://github.com/guanqiyuan/Rain800) |
+| Rain200L/H | 2017 | 去雨 | 小雨/大雨 | 图像 | 是 | 4K | 未说明 | Rain200L 与 Rain200H 各 1,800 train / 200 test | 合成 | clean image | [Official](https://www.icst.pku.edu.cn/struct/Projects/joint_rain_removal.html) |
+| DID-Data / Rain1200 | 2018 | 去雨 | 雨线 | 图像 | 是 | 13.2K | 未说明 | 12,000 train / 1,200 test | 合成 | clean image、rain density | [DID-MDN](https://github.com/hezhangsprinter/DID-MDN) / [GCANet](https://github.com/wfs123456/GCANet) |
+| RainDrop / Raindrop-A / TestA | 2018 | 雨滴去除 | 雨滴 | 图像 | 是 | 约 1.1K | 未说明 | All-weather 协议常用 818 train / 58 test | 真实雨滴 + 配对 GT | clean image | [Project](https://rui1996.github.io/raindrop/raindrop_removal.html) / [GitHub](https://github.com/rui1996/DeRaindrop) |
+| SPA-Data | 2019 | 真实去雨 | 雨 | 图像 | 是 | 约 29.5K 或更大规模版本 | 未说明 | CyclicPrompt、AllRestorer 用于真实雨天测试 | 真实 | clean image | [SPANet](https://github.com/stevewongv/SPANet) |
+| RainDS / RainDS-real | 2021 | 真实去雨、雨滴/雨线恢复 | 雨、雨滴 | 图像 | 是/部分无 GT | 5.8K | 未说明 | 含 rain streak only、raindrop only、混合雨退化；部分真实测试无 GT | 合成 + 真实 | clean image / 无 GT | [GitHub](https://github.com/Songforrr/RainDS_CCN) |
+| RainMotion | 2022 | 视频去雨 | 雨 | 视频 | 是 | 80 个视频，2,800 帧 | 未说明 | 40 train / 40 test；2,000 train frames / 800 test frames | 合成 | clean video frames | [RDD-Net](https://github.com/wangshauitj/RDD-Net) |
+| RealRain-1k | 2022 | 真实去雨 | 雨线、雨累积 | 图像 | 是 | 1,120 对 | 高分辨率，具体未说明 | 低密度/高密度雨纹子集 | 真实视频生成配对 | clean image、rain streak layer | [GitHub](https://github.com/hiker-lw/RealRain-1k) |
+| GTAV-NightRain | 2022 | 夜间去雨 | 夜间雨线 | 图像 | 是 | 12,860 rainy / 1,286 clean | HD | set1 / set2 / set3 | GTA V 合成 | clean image | [GitHub](https://github.com/zkawfanx/GTAV-NightRain) |
+| GT-RAIN | 2022 | 真实去雨 | 雨线、雨累积 | 图像/视频帧 | 是 | 31,524 对 | 未说明 | 26,124 train / 3,300 val / 2,100 test | 真实 | clean image | [Project](https://visual.ee.ucla.edu/gt_rain.htm/) / [GitHub](https://github.com/UCLA-VMG/GT-RAIN) |
+| LWDDS | 2023 | 视频雨滴去除 | 雨滴 | 视频 | 是 | 68,100 对帧 | 未说明 | 45 train clips / 6 test clips；67,500 train / 600 test | 合成 | clean video frames | [GitHub](https://github.com/csqiangwen/Video_Waterdrop_Removal_in_Driving_Scenes) |
+| VRDS | 2023 | 视频去雨滴 + 去雨线 | 雨滴、雨线 | 视频 | 是 | 102 个视频 | 1280 x 720 | 72 train / 30 test | 合成 | clean video frames、rain mask | [GitHub](https://github.com/TonyHongtaoWu/ViMP-Net) |
+| LHP-Rain | 2023 | 真实去雨 | 雨线、雨雾、地面飞溅 | 视频帧/图像 | 是 | 3,000 视频序列，约 1M 帧对 | 1920 x 1080 | 官方 train/test | 真实 | clean frame | [GitHub](https://github.com/yunguo224/LHP-Rain) |
+| HQ-RAIN | 2023 | 去雨统一评估 | 雨线 | 图像 | 是 | 5,000 对 | 高分辨率，具体未说明 | 官方 train/test | 合成 | clean image | [GitHub](https://github.com/cschenxiang/HQ-RAIN) |
+| UAV-Rain1k | 2024 | 无人机雨滴去除 | 雨滴 | 图像 | 是 | 1,020 对 | 平均约 1500 x 1000 | 800 train / 220 test | 合成 | clean image、雨滴密度标签 | [GitHub](https://github.com/cschenxiang/UAV-Rain1k) |
+| RoadScene-rain | 2024 | 夜间去雨 | 夜间雨天驾驶 | 图像 | 是 | 221 对 | 未说明 | 181 train / 40 test | 合成 | clean image / RGB-IR reference | [GitHub](https://github.com/CidanShi/NiteDR-Nighttime-Image-De-raining) |
+| Raindrop Clarity | 2024 | 雨滴去除 | 白天/夜间雨滴 | 图像 | 是 | 15,186 对/三元组 | 未说明 | 白天 5,442；夜间 9,744 | 真实 | clean background、focus variants | [GitHub](https://github.com/jinyeying/RaindropClarity) |
+| HQ-NightRain | 2025 | 夜间去雨 | 夜间雨线、雨滴、混合雨 | 图像 | 是 | 10,000 train / 900 val / 300 test；另含 512 真实夜雨图像 | 1280 x 720 | 10,000 train / 900 val / 300 test | 合成 + 真实 | clean image、real rainy subset | [GitHub](https://github.com/guanqiyuan/CST-Net) |
+
+### 7.2 去雾与去烟 Dehazing / Desmoking
+
+| 数据集名称 | 年份 | 任务 | 天气类型 | 数据类型 | 是否配对 | 图像数量 | 分辨率 | 训练/测试划分 | 合成/真实 | 标注类型 | 下载链接 |
+|---|---:|---|---|---|---|---:|---|---|---|---|---|
+| WaterlooIVC Dehazed Image Database | 2015 | 去雾主观评价 | 雾/霾 | 图像 | 否 | 25 组 | 未说明 | 25 张真实有雾图像，每张对应 8 种算法结果 | 真实 | human perceptual score / dehazed outputs | [Official](https://ivc.uwaterloo.ca/database/dehaze.html) |
+| D-HAZY | 2016 | 去雾 | 雾/霾 | 图像 | 是 | 约 1.4K | 640 x 480 等 | 基于 NYU-Depth v2 和 Middlebury 合成 | 合成 | clean image、depth | [Baidu](https://pan.baidu.com/s/1r_ByUn1wvbBgMBxbmTOF2Q) |
+| O-HAZE | 2018 | 去雾 | 室外雾 | 图像 | 是 | 45 | 未说明 | NTIRE 2018 Outdoor Dehazing | 真实人工造雾 | clean image | [Official](https://data.vision.ee.ethz.ch/cvl/ntire18//o-haze/) |
+| I-HAZE | 2018 | 去雾 | 室内雾 | 图像 | 是 | 35 | 未说明 | NTIRE 2018 Indoor Dehazing | 真实人工造雾 | clean image | [Official](https://data.vision.ee.ethz.ch/cvl/ntire18//i-haze/) |
+| RESIDE / SOTS-outdoor | 2019 | 去雾 | 雾/霾 | 图像 | 是 | 约 87K | 未说明 | 含 ITS、OTS、SOTS、RTTS、HSTS；ARHC 使用 SOTS-outdoor 评估 | 合成 + 真实 | clean image | [Official](https://sites.google.com/view/reside-dehaze-datasets/reside-v0) |
+| Dense-Haze | 2019 | 去雾 | 浓雾 | 图像 | 是 | 55 | 未说明 | NTIRE 2019 Dense Haze | 真实人工造雾 | clean image | [Official](https://data.vision.ee.ethz.ch/cvl/ntire19//dense-haze/) |
+| NH-HAZE | 2020 | 去雾 | 非均匀雾/霾 | 图像 | 是 | 55 | 未说明 | NTIRE 2020 challenge 数据 | 真实 | clean image | [Official](https://data.vision.ee.ethz.ch/cvl/ntire20/nh-haze/) |
+| REVIDE | 2021 | 视频去雾 | 雾 | 视频 | 是 | 48 个视频，1,082 帧 | 未说明 | 42 train / 6 test；928 train frames / 154 test frames | 真实 | clean video frames | [GitHub](https://github.com/BookerDeWitt/REVIDE_Dataset) |
+| Haze4K | 2021 | 去雾 | 雾/霾 | 图像 | 是 | 4K | 未说明 | 3,000 train / 1,000 test | 合成 | clean image、transmission、大气光 | [DMT-Net](https://github.com/liuye123321/DMT-Net) |
+| RIDCP Synthetic Dehazing Data | 2023 | 去雾 | 真实感雾、低光、噪声、JPEG 压缩 | 图像 | 是 | 由退化管线生成 | 未说明 | 训练数据由官方管线生成 | 合成 | clean image | [GitHub](https://github.com/RQ-Wu/RIDCP_dehazing) |
+| SmokeBench | 2025 | 去烟雾 | 火灾烟雾/监控烟雾 | 图像 | 是 | 具体数量见仓库 | 未说明 | 官方 train/test | 真实采集 | clean image / smoke image | [GitHub](https://github.com/ncfjd/SmokeBench) |
+
+### 7.3 去雪 Desnowing
 
 | 数据集名称 | 年份 | 任务 | 天气类型 | 数据类型 | 是否配对 | 图像数量 | 分辨率 | 训练/测试划分 | 合成/真实 | 标注类型 | 下载链接 |
 |---|---:|---|---|---|---|---:|---|---|---|---|---|
 | Snow100K | 2018 | 去雪 | 雪 | 图像 | 是 | 100K | 最大边长约 640 | 50K train / 50K test；常用 Snow100K-S/M/L 子测试集 | 合成 | clean image、snow mask | [Official](https://sites.google.com/view/yunfuliu/desnownet) |
 | Snow100K-real / Snow100K-R | 2018 | 真实去雪评估 | 雪 | 图像 | 否 | 1,329 | 最大边长约 640 | 仅真实测试/定性评估 | 真实 | 无 GT | [Official](https://sites.google.com/view/yunfuliu/desnownet) |
-| Rain1200 | 2018 | 去雨 | 雨 | 图像 | 是 | 13.2K | 未说明 | 12,000 train / 1,200 test | 合成 | clean image、rain density | [GCANet](https://github.com/wfs123456/GCANet) |
-| RainDrop / Raindrop-A / TestA | 2018 | 雨滴去除 | 雨滴 | 图像 | 是 | 约 1.1K | 未说明 | All-weather 协议常用 818 train / 58 test | 真实雨滴 + 配对 GT | clean image | [Project](https://rui1996.github.io/raindrop/raindrop_removal.html) / [GitHub](https://github.com/rui1996/DeRaindrop) |
-| SICE | 2018 | 低照度增强 | 夜间/低照度 | 图像 | 是 | 589 组序列，4,413 张图像 | 高分辨率，具体未说明 | Part1: 360 sequences；Part2: 229 sequences | 真实/多曝光 | reference image | [GitHub](https://github.com/csjcai/SICE) |
-| RESIDE / SOTS-outdoor | 2019 | 去雾 | 雾/霾 | 图像 | 是 | 约 87K | 未说明 | 含 ITS、OTS、SOTS、RTTS、HSTS；ARHC 使用 SOTS-outdoor 评估 | 合成 + 真实 | clean image | [Official](https://sites.google.com/view/reside-dehaze-datasets/reside-v0) |
-| Outdoor-Rain / Test1 | 2019 | 去雨 + 去雾 | 雨线、雾/霾 | 图像 | 是 | 约 10.5K | 高分辨率，具体未说明 | 常用 8,250 train / 750 test | 合成 | clean image | [TransWeather](https://github.com/jeya-maria-jose/TransWeather) / [WeatherDiffusion](https://github.com/IGITUGraz/WeatherDiffusion) |
-| SPA-Data | 2019 | 真实去雨 | 雨 | 图像 | 是 | 约 29.5K 或更大规模版本 | 未说明 | CyclicPrompt、AllRestorer 用于真实雨天测试 | 真实 | clean image | [SPANet](https://github.com/stevewongv/SPANet) |
-| Dark Zurich | 2019 | 下游语义分割评估 | 夜间/低照度 | 图像 | 否/部分配对 | 8,779 | 未说明 | 含 nighttime、dusk、daytime；用于夜间语义分割 | 真实 | semantic segmentation labels | [MGCDA](https://github.com/sakaridis/MGCDA) |
-| NH-HAZE | 2020 | 去雾 | 非均匀雾/霾 | 图像 | 是 | 55 | 未说明 | NTIRE 2020 challenge 数据 | 真实 | clean image | [Official](https://data.vision.ee.ethz.ch/cvl/ntire20/nh-haze/) |
-| LOL-v2 | 2020 | 低照度增强 | 低照度/夜间 | 图像 | 是 | Real: 789；Synthetic: 1,000 | 未说明 | Real: 689 train / 100 test；Synthetic: 900 train / 100 test | 真实 + 合成 | clean image | [CVPR-2020-Semi-Low-Light](https://github.com/flyywh/CVPR-2020-Semi-Low-Light/) |
-| REVIDE | 2021 | 视频去雾 | 雾 | 视频 | 是 | 48 个视频，1,082 帧 | 未说明 | 42 train / 6 test；928 train frames / 154 test frames | 真实 | clean video frames | [GitHub](https://github.com/BookerDeWitt/REVIDE_Dataset) |
 | CSD | 2021 | 去雪 | 雪、雪雾/veil | 图像 | 是 | 10K | 未说明 | MWFormer-real 将其训练集加入训练 | 合成 | clean image | [GitHub](https://github.com/weitingchen83/ICCV2021-Single-Image-Desnowing-HDCWNet) |
-| RainDS / RainDS-real | 2021 | 真实去雨、雨滴/雨线恢复 | 雨、雨滴 | 图像 | 是/部分无 GT | 5.8K | 未说明 | 含 rain streak only、raindrop only、混合雨退化；部分真实测试无 GT | 合成 + 真实 | clean image / 无 GT | [GitHub](https://github.com/Songforrr/RainDS_CCN) |
-| All-weather / AllWeather | 2022 | 多天气统一恢复 | 雨雾、雪、雨滴 | 图像 | 是 | 18,069 train；测试集约 16K-17K | 未说明 | 训练集由 Snow100K、Outdoor-Rain、RainDrop 组成；测试包含 Test1、RainDrop TestA、Snow100K-L/S | 合成 + 真实雨滴 | clean image | [TransWeather](https://github.com/jeya-maria-jose/TransWeather) |
-| RainMotion | 2022 | 视频去雨 | 雨 | 视频 | 是 | 80 个视频，2,800 帧 | 未说明 | 40 train / 40 test；2,000 train frames / 800 test frames | 合成 | clean video frames | [RDD-Net](https://github.com/wangshauitj/RDD-Net) |
-| WeatherStream | 2023 | 多天气统一恢复 | 雨、雪、雾 | 视频帧/图像 | 是 | 187,500 | 未说明 | 176,100 train / 11,400 test | 真实/自动采集 | clean image | [WGWS-Net](https://github.com/zhuyr97/WGWS-Net) |
 | KITTI-snow | 2023 | 视频去雪 | 雪 | 视频 | 是 | 50 个视频，2,500 帧 | 未说明 | 35 train / 15 test；1,750 train frames / 750 test frames | 合成 | clean video frames | [ViWS-Net](https://github.com/scott-yjyang/ViWS-Net) |
+
+### 7.4 低照度与夜间增强 Low-Light / Nighttime Enhancement
+
+| 数据集名称 | 年份 | 任务 | 天气类型 | 数据类型 | 是否配对 | 图像数量 | 分辨率 | 训练/测试划分 | 合成/真实 | 标注类型 | 下载链接 |
+|---|---:|---|---|---|---|---:|---|---|---|---|---|
+| SICE | 2018 | 低照度增强 | 夜间/低照度 | 图像 | 是 | 589 组序列，4,413 张图像 | 高分辨率，具体未说明 | Part1: 360 sequences；Part2: 229 sequences | 真实/多曝光 | reference image | [GitHub](https://github.com/csjcai/SICE) |
+| LOL-v1 | 2018 | 低照度增强 | 低照度/夜间 | 图像 | 是 | 500 | 400 x 600 | 485 train / 15 test | 真实 + 合成 | normal-light reference | [Project](https://daooshee.github.io/BMVC2018website/) |
+| SID | 2018 | 极低照度增强 | 夜间/极低照度 | RAW 图像 | 是 | 5,094 | RAW 原始分辨率 | Sony / Fuji 子集，短曝光输入与长曝光参考 | 真实 | long-exposure reference | [Project](https://cchen156.github.io/SID.html) / [GitHub](https://github.com/cchen156/Learning-to-See-in-the-Dark) |
+| LOL-v2 | 2020 | 低照度增强 | 低照度/夜间 | 图像 | 是 | Real: 789；Synthetic: 1,000 | 未说明 | Real: 689 train / 100 test；Synthetic: 900 train / 100 test | 真实 + 合成 | clean image | [CVPR-2020-Semi-Low-Light](https://github.com/flyywh/CVPR-2020-Semi-Low-Light/) |
+| SDSD | 2021 | 低照度视频增强 | 夜间/低照度 | 视频 | 是 | 150 对视频，37,500 帧 | 1920 x 1080 | 70 indoor / 80 outdoor | 真实 | normal-light video frames | [GitHub](https://github.com/dvlab-research/SDSD) |
+| LSRW | 2021 | 低照度增强 | 低照度/夜间 | 图像 | 是 | 5,650 对 | 未说明 | 官方 train/test | 真实 | normal-light reference | [GitHub](https://github.com/JianghaiSCU/R2RNet) |
+| DID | 2023 | 低照度视频增强 | 低照度/夜间 | 视频 | 是 | 413 对视频，41,038 帧 | 560 x 1440 / 最高 2560 x 1440 | 官方 train/test | 真实 | normal-light video frames | [GitHub](https://github.com/ciki000/DID) |
+| UHD-LOL | 2023 | 超高清低照度增强 | 低照度/夜间 | 图像 | 是 | 约 11K 对 | 4K / 8K | UHD-LOL4K 与 UHD-LOL8K train/test | 合成 | normal-light reference | [LLFormer](https://github.com/TaoWangzj/LLFormer) |
+| UHD-LL | 2023 | 超高清低照度增强 | 低照度/夜间 | 图像 | 是 | 2,150 对 | 4K UHD | 2,000 train / 150 test | 真实 | normal-light reference | [UHDFour](https://li-chongyi.github.io/UHDFour/) / [GitHub](https://github.com/Li-Chongyi/UHDFour) |
+| RELED | 2024 | 低照度视频增强 + 去模糊 | 低照度/夜间 | 视频 + event | 是 | 42 个城市场景 | 1024 x 768 | 官方 train/test | 真实 | normal-light sharp image、event stream | [GitHub](https://github.com/intelpro/ELEDNet) |
+
+### 7.5 All-in-One / 多天气与复合退化
+
+| 数据集名称 | 年份 | 任务 | 天气类型 | 数据类型 | 是否配对 | 图像数量 | 分辨率 | 训练/测试划分 | 合成/真实 | 标注类型 | 下载链接 |
+|---|---:|---|---|---|---|---:|---|---|---|---|---|
+| Outdoor-Rain / Test1 | 2019 | 去雨 + 去雾 | 雨线、雾/霾 | 图像 | 是 | 约 10.5K | 高分辨率，具体未说明 | 常用 8,250 train / 750 test | 合成 | clean image | [TransWeather](https://github.com/jeya-maria-jose/TransWeather) / [WeatherDiffusion](https://github.com/IGITUGraz/WeatherDiffusion) |
+| All-weather / AllWeather | 2022 | 多天气统一恢复 | 雨雾、雪、雨滴 | 图像 | 是 | 18,069 train；测试集约 16K-17K | 未说明 | 训练集由 Snow100K、Outdoor-Rain、RainDrop 组成；测试包含 Test1、RainDrop TestA、Snow100K-L/S | 合成 + 真实雨滴 | clean image | [TransWeather](https://github.com/jeya-maria-jose/TransWeather) |
+| WeatherStream | 2023 | 多天气统一恢复 | 雨、雪、雾 | 视频帧/图像 | 是 | 187,500 | 未说明 | 176,100 train / 11,400 test | 真实/自动采集 | clean image | [WGWS-Net](https://github.com/zhuyr97/WGWS-Net) |
 | CDD-11 | 2024 | 多天气统一恢复、复合退化恢复 | 低照度、雾、雨、雪及其复合退化 | 图像 | 是 | 11 类退化，具体数量见仓库 | 1080 x 720 原图；训练 patch 256 x 256 | 官方 train/test | 合成 + 真实 | clean image | [HuggingFace](https://huggingface.co/datasets/gy65896/CDD-11) / [OneRestore](https://github.com/gy65896/OneRestore) |
 | HAC | 2025 | 任意混合不利天气恢复 | 雾、雨、雪、夜间、雨滴 | 图像 | 是 | 约 316K | 未说明 | 含 31 种退化组合；训练集自动生成，测试集人工调制 | 合成 | clean image、退化类型标签 | [GitHub](https://github.com/arun-kollan/RAHC) / [Paper](https://arxiv.org/abs/2305.09996) |
 | WeatherBench | 2025 | 真实多天气统一恢复 | 雨、雪、雾、昼夜光照 | 图像 | 是 | 42,002 对 | 512 x 512 | 41,402 train / 600 test | 真实 | clean image | [GitHub](https://github.com/guanqiyuan/WeatherBench) |
 
+### 7.6 下游夜间感知评估 Downstream Nighttime Evaluation
 
-## 9. 评价指标整理模板
+| 数据集名称 | 年份 | 任务 | 天气类型 | 数据类型 | 是否配对 | 图像数量 | 分辨率 | 训练/测试划分 | 合成/真实 | 标注类型 | 下载链接 |
+|---|---:|---|---|---|---|---:|---|---|---|---|---|
+| Dark Zurich | 2019 | 下游语义分割评估 | 夜间/低照度 | 图像 | 否/部分配对 | 8,779 | 未说明 | 含 nighttime、dusk、daytime；用于夜间语义分割 | 真实 | semantic segmentation labels | [MGCDA](https://github.com/sakaridis/MGCDA) |
+
+
+## 9. 评价指标
 
 | 指标 | 类型 | 计算对象 | 是否需要 GT | 越大越好/越小越好 | 反映能力 | 局限 | 适用任务 | 备注 |
 |---|---|---|---|---|---|---|---|---|
